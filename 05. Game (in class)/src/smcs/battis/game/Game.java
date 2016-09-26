@@ -5,10 +5,24 @@ import objectdraw.*;
 public class Game extends WindowController {
 
 	private World world;
-	private Character me;
+	private Character protagonist, antagonist;
 	
 	public void begin() {
-		world = new World(canvas);
-		me = new Character();
+		this.setSize(500, 500);
+		world = new World(
+			getImage("http://cdn.pcwallart.com/images/color-gradient-background-wallpaper-2.jpg"),
+			canvas
+		);
+		protagonist = new PlayableCharacter(
+			getImage("stick-figure.png"),
+			new Location(100, 450),
+			world
+		);
+		antagonist = new ChaseCharacter(
+				getImage("stick-figure.png"),
+				new Location(100, 450),
+				world
+			);
+		canvas.requestFocus();
 	}
 }
