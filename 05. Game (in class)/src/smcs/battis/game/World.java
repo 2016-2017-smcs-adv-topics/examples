@@ -11,7 +11,7 @@ public class World {
 	
 	public World(Image background, DrawingCanvas canvas) {
 		this.canvas = canvas;
-		new VisibleImage(background, 0, 0, canvas);
+		new VisibleImage(background, -500, -250, canvas);
 	}
 
 	public DrawingCanvas getCanvas() {

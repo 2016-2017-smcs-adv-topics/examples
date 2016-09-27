@@ -15,13 +15,14 @@ public class Game extends WindowController {
 		);
 		protagonist = new PlayableCharacter(
 			getImage("stick-figure.png"),
-			new Location(100, 450),
+			new Location(250, 250),
 			world
 		);
 		antagonist = new ChaseCharacter(
 				getImage("stick-figure.png"),
-				new Location(100, 450),
-				world
+				new Location(100, 100),
+				world,
+				protagonist
 			);
 		canvas.requestFocus();
 	}

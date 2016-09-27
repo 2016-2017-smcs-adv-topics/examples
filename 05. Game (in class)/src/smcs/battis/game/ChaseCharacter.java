@@ -6,15 +6,24 @@ import objectdraw.Location;
 
 public class ChaseCharacter extends Character implements Runnable {
 
-	public ChaseCharacter(Image avatar, Location startingOrigin, World world) {
+	private Character target;
+	
+	public ChaseCharacter(
+		Image avatar,
+		Location startingOrigin,
+		World world,
+		Character target) {
 		super(avatar, startingOrigin, world);
+		this.target = target;
 		new Thread(this).start();
 	}
 
 	@Override
 	public void run() {
-		while (getY() > 0) {
-			move(0, -stride);
+		double theta;
+		while (true) {
+			theta = Math.atan2(target.getY() - getY(), target.getX() - getX());
+			move(Math.cos(theta) * stride, Math.sin(theta) * stride);
 			try {
 				Thread.sleep(250);
 			} catch (InterruptedException e) {
