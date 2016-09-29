@@ -47,4 +47,9 @@ public class Character {
 	public void move(double dx, double dy) {
 		this.avatar.move(dx, dy);
 	}
+	
+	public boolean overlap(Character other) {
+		// TODO placeholder -- figure this out!
+		return true;
+	}
 }
