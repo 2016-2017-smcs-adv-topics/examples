@@ -20,7 +20,7 @@ public class Animals {
 			if (userInputYesOrNo()) {
 				finger = finger.getYes(); // move finger to yes child
 			} else {
-				finger = finger.getNo();
+				finger = finger.getNo(); // move finger to no child
 			}
 		}
 		
