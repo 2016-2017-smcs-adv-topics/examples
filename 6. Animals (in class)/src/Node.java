@@ -42,4 +42,8 @@ public class Node {
 	public void setNo(Node n) throws Exception {
 		no = guaranteeNotNull(n);
 	}
+	
+	public boolean hasChildren() {
+		return (yes != null) && (no != null);
+	}
 }
