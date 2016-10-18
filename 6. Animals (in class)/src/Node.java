@@ -1,5 +1,6 @@
+import java.io.*;
 
-public class Node {
+public class Node implements Serializable {
 	private String value;
 	private Node yes, no;
 	
