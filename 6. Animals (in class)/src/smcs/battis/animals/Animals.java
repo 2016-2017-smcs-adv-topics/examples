@@ -1,3 +1,4 @@
+package smcs.battis.animals;
 import java.io.*;
 import java.util.*;
 
