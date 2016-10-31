@@ -59,4 +59,12 @@ public class RandomVector extends Vector<Integer> {
 			}
 		}
 	}
+	
+	public RandomVector subList(int start, int end) {
+		RandomVector sub = new RandomVector(0);
+		for (int i = start; i <= end && i >= 0 && i < size(); i++) {
+			sub.add(get(i));
+		}
+		return sub;
+	}
 }

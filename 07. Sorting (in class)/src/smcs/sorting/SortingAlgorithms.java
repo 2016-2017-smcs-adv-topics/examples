@@ -5,7 +5,7 @@ public class SortingAlgorithms {
 	public static void main(String[] args) {
 		RandomVector v = new RandomVector(10);
 
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 4; i++) {
 			v.shuffle(v.size());
 			System.out.println();
 			System.out.print(v);
@@ -22,6 +22,10 @@ public class SortingAlgorithms {
 			case 2:
 				System.out.println("Insertion Sort");
 				insertionSort(v);
+				break;
+			case 3:
+				System.out.println("Mergesort");
+				mergesort(v);
 				break;
 			}
 		}
@@ -104,6 +108,56 @@ public class SortingAlgorithms {
 				}
 			}
 		} while (swaps > 0);
+	}
+	
+	private static void mergesort(RandomVector v) {
+		
+		System.out.println(v + " <-- UNSORTED");
+		
+		if (v.size() <= 1) {
+			// it's sorted!
+			return;
+		} else {
+			int
+				half = v.size() / 2,
+				i = 0,
+				j = 0;
+			RandomVector
+				left = v.subList(0, half-1),
+				right = v.subList(half, v.size()-1),
+				sorted = new RandomVector(0);
 
+			System.out.println(left + " " + right);
+
+			mergesort(left);
+			mergesort(right);
+
+			System.out.println(left + " " + right);
+			
+			while (i < left.size() || j < right.size()) {
+				if (i < left.size()) {
+					if (j < right.size()) {
+						if (left.get(i) < right.get(j)) {
+							sorted.add(left.get(i));
+							i++;
+						} else {
+							sorted.add(right.get(j));
+							j++;
+						}
+					} else {
+						sorted.add(left.get(i));
+						i++;
+					}
+				} else {
+					sorted.add(right.get(j));
+					j++;
+				}
+			}
+			
+			v.clear();
+			v.addAll(sorted);
+			
+			System.out.println(v + " <-- SORTED");
+		}
 	}
 }
