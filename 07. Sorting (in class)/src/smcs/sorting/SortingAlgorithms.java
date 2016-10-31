@@ -114,6 +114,7 @@ public class SortingAlgorithms {
 		
 		System.out.println(v + " <-- UNSORTED");
 		
+		// if we have 1 or fewer elements…
 		if (v.size() <= 1) {
 			// it's sorted!
 			return;
@@ -125,37 +126,36 @@ public class SortingAlgorithms {
 			RandomVector
 				left = v.subList(0, half-1),
 				right = v.subList(half, v.size()-1),
-				sorted = new RandomVector(0);
+			v.clear();
 
 			System.out.println(left + " " + right);
 
+			// otherwise, mergesort the left and right halves…
 			mergesort(left);
 			mergesort(right);
 
 			System.out.println(left + " " + right);
 			
+			// …and then merge them back together again
 			while (i < left.size() || j < right.size()) {
 				if (i < left.size()) {
 					if (j < right.size()) {
 						if (left.get(i) < right.get(j)) {
-							sorted.add(left.get(i));
+							v.add(left.get(i));
 							i++;
 						} else {
-							sorted.add(right.get(j));
+							v.add(right.get(j));
 							j++;
 						}
 					} else {
-						sorted.add(left.get(i));
+						v.add(left.get(i));
 						i++;
 					}
 				} else {
-					sorted.add(right.get(j));
+					v.add(right.get(j));
 					j++;
 				}
 			}
-			
-			v.clear();
-			v.addAll(sorted);
 			
 			System.out.println(v + " <-- SORTED");
 		}
