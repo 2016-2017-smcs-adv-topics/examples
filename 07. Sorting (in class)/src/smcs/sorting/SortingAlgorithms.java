@@ -125,7 +125,7 @@ public class SortingAlgorithms {
 				j = 0;
 			RandomVector
 				left = v.subList(0, half-1),
-				right = v.subList(half, v.size()-1),
+				right = v.subList(half, v.size()-1);
 			v.clear();
 
 			System.out.println(left + " " + right);
