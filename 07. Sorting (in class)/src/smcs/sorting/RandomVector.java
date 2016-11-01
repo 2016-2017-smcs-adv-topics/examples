@@ -59,7 +59,17 @@ public class RandomVector extends Vector<Integer> {
 			}
 		}
 	}
-	
+
+	/**
+	 * Copy a section of the vector into a sublist
+	 * 
+	 * @param start
+	 * @param end
+	 * @return A new RandomVector containing the elements of this vector from
+	 *         start to end, inclusive. (If start is out-of-bounds, nothin will
+	 *         be returned. If end is out-of-bounds, all elements from start to
+	 *         the end of the vector will be returned.)
+	 */
 	public RandomVector subList(int start, int end) {
 		RandomVector sub = new RandomVector(0);
 		for (int i = start; i <= end && i >= 0 && i < size(); i++) {
