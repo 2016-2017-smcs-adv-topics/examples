@@ -24,4 +24,6 @@ public class ListNode {
 	public void setNext(ListNode n) {
 		next = n;
 	}
+
+	
  }

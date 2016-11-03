@@ -27,8 +27,14 @@ public class RandomList {
 	 * @return The number of elements in this list
 	 */
 	public int size() {
-		// TODO Group 2
-		return 0;
+		int size = 0;
+		ListNode current=head;
+		while(current!=null){
+		head.getNext();
+		size++;
+		}
+
+		return size;
 	}
 
 	/**
@@ -63,8 +69,10 @@ public class RandomList {
 	 * @return Value of the first element of the list
 	 */
 	public int head() {
-		// TODO Group 2
-		return 0;
+		while(isEmpty()==false){
+			//check for head
+		}
+		return head.getValue();
 	}
 
 	/**
