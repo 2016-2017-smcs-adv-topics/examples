@@ -49,7 +49,23 @@ public class RandomList {
 	 */
 	public RandomList split(int startOfSecondHalf) {
 		// TODO Group 3
-		return null;
+		if(!isEmpty()){
+			
+		RandomList second = new RandomList();
+		ListNode count = head;
+		for(int i=0; i<startOfSecondHalf-1; i++){
+			count = count.getNext(); //count counts to the tail of first half
+		}
+		second.add(count.getNext()); //head of second is the node after first half tail
+		second.add(tail); //add tail of current list
+		
+		this.tail = count; //change current list to only the first half of the list
+		return second; 
+		
+		}else{
+			return this;
+			System.out.println("empty list");
+		}
 	}
 
 	/**
@@ -101,5 +117,7 @@ public class RandomList {
 	 */
 	public void clear() {
 		// TODO Group 3
+		head = null;
+		tail = null;
 	}
 }
