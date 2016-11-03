@@ -19,6 +19,10 @@ public class RandomList {
 	 */
 	public RandomList(RandomList other) {
 		// TODO Group 1
+		int intOtherHead = l.getValue(head);
+		int intOtherTail = l.getValue(tail);
+		other.set(other.size(), intOtherTail);
+		other.set(0, intOtherTail);
 	}
 
 	/**
@@ -27,8 +31,14 @@ public class RandomList {
 	 * @return The number of elements in this list
 	 */
 	public int size() {
-		// TODO Group 2
-		return 0;
+		int size = 0;
+		ListNode current=head;
+		while(current!=null){
+		head.getNext();
+		size++;
+		}
+
+		return size;
 	}
 
 	/**
@@ -43,7 +53,23 @@ public class RandomList {
 	 */
 	public RandomList split(int startOfSecondHalf) {
 		// TODO Group 3
-		return null;
+		if(!isEmpty()){
+			
+		RandomList second = new RandomList();
+		ListNode count = head;
+		for(int i=0; i<startOfSecondHalf-1; i++){
+			count = count.getNext(); //count counts to the tail of first half
+		}
+		second.add(count.getNext()); //head of second is the node after first half tail
+		second.add(tail); //add tail of current list
+		
+		this.tail = count; //change current list to only the first half of the list
+		return second; 
+		
+		}else{
+			return this;
+			System.out.println("empty list");
+		}
 	}
 
 	/**
@@ -52,8 +78,12 @@ public class RandomList {
 	 * @return whether or not the list is empty
 	 */
 	public boolean isEmpty() {
-		// TODO Group 1
-		return true;
+		
+		if (head == null && tail == null){
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -63,8 +93,10 @@ public class RandomList {
 	 * @return Value of the first element of the list
 	 */
 	public int head() {
-		// TODO Group 2
-		return 0;
+		while(isEmpty()==false){
+			//check for head
+		}
+		return head.getValue();
 	}
 
 	/**
@@ -86,6 +118,16 @@ public class RandomList {
 	 */
 	public void add(int value) {
 		// TODO Group 1
+		int listSize = RandomList.size();
+		for (int x = listSize; x > 0; x--){
+			RandomList.set(x, x-1);
+		}
+		tail.getValue() = value; 
+	}
+
+	private static void set(int x, int i) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	/**
@@ -93,5 +135,7 @@ public class RandomList {
 	 */
 	public void clear() {
 		// TODO Group 3
+		head = null;
+		tail = null;
 	}
 }
