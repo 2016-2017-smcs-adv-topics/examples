@@ -88,17 +88,8 @@ public class RandomList {
 	 * @return Value of the first element of the list
 	 */
 	public int head() {
-		// TODO Group 2
-		// return 0;
-		int a = 0;
-		if (head != null) {
-
-			a = head.getValue();
-
-			// how do you get a avlue from a node
-
-		}
-		return a;
+		assert(!isEmpty());
+		return head.getValue();
 	}
 
 	/**
@@ -109,19 +100,13 @@ public class RandomList {
 	 * @postcondition Head of list advances to element after head
 	 */
 	public int pop() {
-		// TODO Group 2
-		// return 0;
-		int i = 0;
-		if (head != null) {
-
-			System.out.print(head.getValue());
-			i = head.getValue();
-			head = head.getNext();
-
-			// check head method
-
+		assert(!isEmpty());
+		int value = head.getValue();
+		if (head == tail) {
+			tail = null;
 		}
-		return i;
+		head = head.getNext();
+		return value;
 	}
 
 	private static void set(int x, int i) {
