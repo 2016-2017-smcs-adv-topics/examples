@@ -88,17 +88,8 @@ public class RandomList {
 	 * @return Value of the first element of the list
 	 */
 	public int head() {
-		// TODO Group 2
-		// return 0;
-		int a = 0;
-		if (head != null) {
-
-			a = head.getValue();
-
-			// how do you get a avlue from a node
-
-		}
-		return a;
+		assert(!isEmpty());
+		return head.getValue();
 	}
 
 	/**
