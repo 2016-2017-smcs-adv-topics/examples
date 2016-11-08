@@ -1,5 +1,7 @@
 package smcs.mergesort;
 
+import smcs.burke.mergsortlist.ListNode;
+
 public class RandomList {
 	
 	/*
@@ -31,14 +33,15 @@ public class RandomList {
 	 * @return The number of elements in this list
 	 */
 	public int size() {
-		int size = 0;
-		ListNode current=head;
-		while(current!=null){
-		head.getNext();
-		size++;
+		int i = 0;
+		// TODO Group 2
+		for(ListNode j = head; j != tail; j = head.getNext()){
+			 
+			++i;
+			
+			
 		}
-
-		return size;
+		return i+1;
 	}
 
 	/**
@@ -93,10 +96,18 @@ public class RandomList {
 	 * @return Value of the first element of the list
 	 */
 	public int head() {
-		while(isEmpty()==false){
-			//check for head
+		// TODO Group 2
+		//return 0;
+		int a = 0;
+		if (head != null){
+		
+			 a =  head.getValue();
+			
+			//how do you get a avlue from a node
+				
+			
 		}
-		return head.getValue();
+		return a;
 	}
 
 	/**
@@ -108,21 +119,21 @@ public class RandomList {
 	 */
 	public int pop() {
 		// TODO Group 2
-		return 0;
-	}
-
-	/**
-	 * O(1)
-	 * @param value The value to be added to this list
-	 * @postcondition The value is added to the end of the list and tail now refers to this new value
-	 */
-	public void add(int value) {
-		// TODO Group 1
-		int listSize = RandomList.size();
-		for (int x = listSize; x > 0; x--){
-			RandomList.set(x, x-1);
+		//return 0;
+		int i = 0;
+		if(head != null){
+		 
+		 System.out.print(head.getValue());
+		  i = head.getValue();
+		 head = head.getNext();
+		
+		 
+		
+		//check head method
+		
+		
 		}
-		tail.getValue() = value; 
+		 return i;
 	}
 
 	private static void set(int x, int i) {
