@@ -1,7 +1,5 @@
 package smcs.mergesort;
 
-import smcs.burke.mergsortlist.ListNode;
-
 public class RandomList {
 	
 	/*
@@ -17,14 +15,11 @@ public class RandomList {
 	 * 
 	 * @param other
 	 * @postcondition This list is a duplicate of other, in that it shares the
-	 *                same head and tail values
+	 *                same head and tail nodes
 	 */
 	public RandomList(RandomList other) {
-		// TODO Group 1
-		int intOtherHead = l.getValue(head);
-		int intOtherTail = l.getValue(tail);
-		other.set(other.size(), intOtherTail);
-		other.set(0, intOtherTail);
+		head = other.head;
+		tail = other.tail;
 	}
 
 	/**
