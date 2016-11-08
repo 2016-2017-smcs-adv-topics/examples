@@ -30,13 +30,13 @@ public class RandomList {
 	public int size() {
 		int i = 0;
 		// TODO Group 2
-		for(ListNode j = head; j != tail; j = head.getNext()){
+		for(ListNode j = head; j != null; j = head.getNext()){
 			 
 			++i;
 			
 			
 		}
-		return i+1;
+		return i;
 	}
 
 	/**
