@@ -2,12 +2,16 @@ package smcs.mergesort;
 
 public class RandomList {
 
-	/*
-	 * Group 1: Gabe, Joey, Reid Group 2: Janelle, Steven, Carol Group 3:
-	 * Amanda, Gillian, Sabin
-	 */
-
 	private ListNode head, tail;
+
+	/**
+	 * O(n)
+	 */
+	public RandomList(int size) {
+		for (int i = 0; i < size; i++) {
+			add((int) (Math.random() * 100));
+		}
+	}
 
 	/**
 	 * O(1)
@@ -27,13 +31,11 @@ public class RandomList {
 	 * @return The number of elements in this list
 	 */
 	public int size() {
-		int i = 0;
-		for (ListNode j = head; j != null; j = head.getNext()) {
-
-			++i;
-
+		int size = 0;
+		for (ListNode finger = head; finger != null; finger = finger.getNext()) {
+			++size;
 		}
-		return i;
+		return size;
 	}
 
 	/**
@@ -49,7 +51,7 @@ public class RandomList {
 	public RandomList split(int startOfSecondHalf) {
 		RandomList second = new RandomList(this);
 		ListNode finger = head;
-		for (int i = 0; i < (startOfSecondHalf - 1) && finger == null; i++) {
+		for (int i = 0; i < (startOfSecondHalf - 1) && finger != null; i++) {
 			finger = finger.getNext(); // finger traverses to the tail of first
 										// half
 		}
@@ -73,7 +75,6 @@ public class RandomList {
 	 * @return whether or not the list is empty
 	 */
 	public boolean isEmpty() {
-
 		if (head == null && tail == null) {
 			return true;
 		} else {
@@ -88,7 +89,7 @@ public class RandomList {
 	 * @return Value of the first element of the list
 	 */
 	public int head() {
-		assert(!isEmpty());
+		assert (!isEmpty());
 		return head.getValue();
 	}
 
@@ -100,7 +101,7 @@ public class RandomList {
 	 * @postcondition Head of list advances to element after head
 	 */
 	public int pop() {
-		assert(!isEmpty());
+		assert (!isEmpty());
 		int value = head.getValue();
 		if (head == tail) {
 			tail = null;
@@ -109,17 +110,44 @@ public class RandomList {
 		return value;
 	}
 
-	private static void set(int x, int i) {
-		// TODO Auto-generated method stub
-
+	/**
+	 * O(1)
+	 * 
+	 * @param value
+	 *            The value to be added to this list
+	 * @postcondition The value is added to the end of the list and tail now
+	 *                refers to this new value
+	 */
+	public void add(int value) {
+		if (isEmpty()) {
+			head = new ListNode(value);
+			tail = head;
+		} else {
+			tail.setNext(new ListNode(value));
+			tail = tail.getNext();
+		}
 	}
 
 	/**
 	 * @postcondition The list becomes empty; head and tail are null
 	 */
 	public void clear() {
-		// TODO Group 3
 		head = null;
 		tail = null;
+	}
+
+	/**
+	 * O(n)
+	 * 
+	 * @return String representation of the list
+	 */
+	public String toString() {
+		ListNode finger = head;
+		String result = "";
+		while (finger != null) {
+			result = result + finger.getValue() + " → ";
+			finger = finger.getNext();
+		}
+		return result + "⋅";
 	}
 }
