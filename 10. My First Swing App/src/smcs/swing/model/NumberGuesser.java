@@ -2,8 +2,15 @@ package smcs.swing.model;
 
 public class NumberGuesser {
 
+	public final static int DEFAULT_LOW = 0;
+	public final static int DEFAULT_HIGH = 10;
+
 	private int number, lastGuess;
 	private boolean haveGuessed;
+
+	public NumberGuesser() {
+		this(DEFAULT_LOW, DEFAULT_HIGH);
+	}
 
 	/**
 	 * generates a random number within a range
@@ -13,6 +20,10 @@ public class NumberGuesser {
 	 * @param high
 	 */
 	public NumberGuesser(int low, int high) {
+		pickANumber(low, high);
+	}
+
+	public void pickANumber(int low, int high) {
 		assert (high > low);
 		number = (int) (Math.random() * (high - low) + low);
 		haveGuessed = false;
@@ -23,7 +34,7 @@ public class NumberGuesser {
 	 */
 	public String guess(int guess) {
 		String response = "uh oh";
-		
+
 		if (!haveGuessed) {
 			haveGuessed = true;
 			response = (guess == number ? "right" : "wrong");
@@ -32,7 +43,7 @@ public class NumberGuesser {
 				response = "right";
 			} else {
 				if (Math.abs(number - guess) < Math.abs(number - lastGuess)) {
-					response =  "hotter";
+					response = "hotter";
 				} else if (Math.abs(number - guess) > Math.abs(number - lastGuess)) {
 					response = "colder";
 				} else {
@@ -40,7 +51,7 @@ public class NumberGuesser {
 				}
 			}
 		}
-		
+
 		lastGuess = guess;
 		return response;
 	}
