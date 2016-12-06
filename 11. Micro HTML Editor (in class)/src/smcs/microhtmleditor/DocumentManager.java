@@ -41,6 +41,13 @@ public class DocumentManager {
 	}
 	
 	/**
+	 * @param f The file to which this document should be bound
+	 */
+	public void bindFile(File f) {
+		// TODO connect this document to a particular file
+	}
+	
+	/**
 	 * @return The document for this manager
 	 */
 	public Document getDocument() {
