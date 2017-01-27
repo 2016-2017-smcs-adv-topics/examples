@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
-import LoginStore from '../stores/LoginStore'
+import AuthenticationService from '../services/AuthenticationService'
 
 export default class Navigation extends Component {
     render() {
@@ -27,7 +27,7 @@ export default class Navigation extends Component {
                             <MenuItem eventKey={3.3}>Whatsit</MenuItem>
                         </LinkContainer>
                     </NavDropdown>
-                    {(LoginStore.isLoggedIn() ?
+                    {(AuthenticationService.isLoggedIn() ?
                         <LinkContainer to="/logout">
                             <NavItem>Log Out</NavItem>
                         </LinkContainer>

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {FormGroup, ControlLabel, FormControl, Button, Row, Col} from 'react-bootstrap';
 
 import AuthenticationService from '../services/AuthenticationService'
@@ -6,12 +6,18 @@ import AuthenticationService from '../services/AuthenticationService'
 /**
  * A Login component to allow users to authenticate to the app
  */
-export default class Login extends Component {
+class Login extends Component {
     constructor() {
         super();
         this.state = {
             user: 'joe@example',
             password: 'password1'
+        }
+    }
+
+    componentWillMount() {
+        if (AuthenticationService.isLoggedIn()) {
+            this.context.router.push('/');
         }
     }
 
@@ -72,3 +78,9 @@ export default class Login extends Component {
         );
     }
 }
+
+Login.contextTypes = {
+    router: PropTypes.object.isRequired
+}
+
+export default Login;
