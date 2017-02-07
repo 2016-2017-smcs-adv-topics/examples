@@ -1,55 +1,30 @@
 class DatabaseService {
     var
     questions = {
-        1: 'Is it bigger than a breadbox?',
-        2: 'What color is it?',
-        3: 'Is it a mouse?',
-        4: 'Yay, I win!',
-        5: 'Boo… I lose.',
-        6: 'Is it an elephant?',
-        7: 'Is it a polar bear?',
-        8: 'Is it a bulldozer?'
+        1: 'Is the power cord plugged securely into the back of the computer case and the power outlet?',
+        2: 'Is it a working outlet?',
+        3: 'Is the computer plugged into a surge protector?',
+        4: 'Is your laptop charged?',
+        5: 'Try plugging in your cord to the back of the computer case.',
+        6: 'Get a lamp and try plugging it in to the outlet and turning it on.'
     }
     answers = {
         1: {
             text: 'Yes',
             question: 2
-        }
-        ,
+        },
         2: {
-            text: 'No',
-            question: 3
-        }
-        ,
-        3: {
-            text: 'Yes',
-            question: 4
-        }
-        ,
-        4: {
             text: 'No',
             question: 5
         },
-        5: {
-            text: 'Grey',
+        3: {
+            text: 'I don\'t know',
             question: 6
-        },
-        6: {
-            text: 'White',
-            question: 7
-        },
-        7: {
-            text: 'Yellow',
-            question: 8
         }
     }
     answerGroups = {
         1: [1, 2],
-        2: [5, 6, 7],
-        3: [3, 4],
-        6: [3, 4],
-        7: [3, 4],
-        8: [3, 4]
+        2: [3]
     };
 
     getQuestion(id) {
