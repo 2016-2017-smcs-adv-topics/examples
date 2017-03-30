@@ -1,0 +1,14 @@
+{
+    "name": "smcs/cardsmithh-api-test",
+    "require": {
+        "battis/educoder-pest-fork": "^1.0",
+        "battis/configxml": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Seth Battis",
+            "email": "sethbattis@stmarksschool.org"
+        }
+    ],
+    "minimum-stability": "dev"
+}
