@@ -1,3 +1,9 @@
+/*
+ * This is a collection of values and a function that calculate the movement of a particular model based on the
+ * timestamp. Essentially, the model is moving back and forth along the Z-axis while also rotating back and forth
+ * around the Z-axis. The sine function provides the periodicity based on the timestamp.
+ */
+
 import { Vector3, Euler, } from 'three';
 
 const positionScale = 0.5;

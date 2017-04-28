@@ -1,3 +1,9 @@
+/*
+ * Generates the actual WebGL that will be processed by THREE. Note how much of this is received as properties from the
+ * RenderContainer or hard-coded in. This could be reworked to load the hard-coded parameters from files or store them
+ * in the state of dedicated objects.
+ */
+
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Vector3, Euler, Geometry, DoubleSide} from 'three';

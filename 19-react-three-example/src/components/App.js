@@ -1,6 +1,9 @@
+/*
+ * The basic shape of the app
+ */
+
 import React, {Component} from 'react';
 import RenderContainer from '../containers/RenderContainer';
-import {ProgressBar} from 'react-bootstrap';
 
 class App extends Component {
     render() {
