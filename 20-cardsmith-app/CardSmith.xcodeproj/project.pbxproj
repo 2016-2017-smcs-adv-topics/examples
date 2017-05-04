@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B68194E62A087C26F330C09 /* Pods_CardSmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEAF2E38FE8FE1527133076F /* Pods_CardSmith.framework */; };
+		5B18E0E11EB91D680027A3BB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B18E0E01EB91D680027A3BB /* UserViewController.swift */; };
+		5B82E90B1EBBB7E100153D9E /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B82E90A1EBBB7E100153D9E /* credentials.plist */; };
+		5B82E90D1EBBB89B00153D9E /* credentials-example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B82E90C1EBBB89B00153D9E /* credentials-example.plist */; };
+		5B82E90F1EBBBED200153D9E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5B82E90E1EBBBED200153D9E /* README.md */; };
+		5BC5209D1EB8BA1600C792A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5209C1EB8BA1600C792A6 /* AppDelegate.swift */; };
+		5BC5209F1EB8BA1600C792A6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5209E1EB8BA1600C792A6 /* SignInViewController.swift */; };
+		5BC520A21EB8BA1600C792A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC520A01EB8BA1600C792A6 /* Main.storyboard */; };
+		5BC520A71EB8BA1600C792A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC520A61EB8BA1600C792A6 /* Assets.xcassets */; };
+		5BC520AA1EB8BA1600C792A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC520A81EB8BA1600C792A6 /* LaunchScreen.storyboard */; };
+		5BC520B51EB8C1D300C792A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC520B41EB8C1D300C792A6 /* Extensions.swift */; };
+		5BC520BA1EB8DF1E00C792A6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC520B91EB8DF1E00C792A6 /* User.swift */; };
+		5BC520BC1EB8F02000C792A6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC520BB1EB8F02000C792A6 /* Account.swift */; };
+		5BC520BE1EB8F54A00C792A6 /* CardSmithApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC520BD1EB8F54A00C792A6 /* CardSmithApi.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B18E0E01EB91D680027A3BB /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		5B82E90A1EBBB7E100153D9E /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		5B82E90C1EBBB89B00153D9E /* credentials-example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "credentials-example.plist"; sourceTree = "<group>"; };
+		5B82E90E1EBBBED200153D9E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5BC520991EB8BA1600C792A6 /* CardSmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardSmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC5209C1EB8BA1600C792A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BC5209E1EB8BA1600C792A6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		5BC520A11EB8BA1600C792A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BC520A61EB8BA1600C792A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BC520A91EB8BA1600C792A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BC520AB1EB8BA1600C792A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC520B11EB8BB3200C792A6 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		5BC520B41EB8C1D300C792A6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5BC520B91EB8DF1E00C792A6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5BC520BB1EB8F02000C792A6 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		5BC520BD1EB8F54A00C792A6 /* CardSmithApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSmithApi.swift; sourceTree = "<group>"; };
+		6687C8AB3D894945F7427AE8 /* Pods-CardSmith.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardSmith.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardSmith/Pods-CardSmith.release.xcconfig"; sourceTree = "<group>"; };
+		9BD83B5C70B300D8785EC1C9 /* Pods-CardSmith.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardSmith.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardSmith/Pods-CardSmith.debug.xcconfig"; sourceTree = "<group>"; };
+		EEAF2E38FE8FE1527133076F /* Pods_CardSmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardSmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BC520961EB8BA1600C792A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B68194E62A087C26F330C09 /* Pods_CardSmith.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B18E0E21EB92AE10027A3BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BC5209E1EB8BA1600C792A6 /* SignInViewController.swift */,
+				5B18E0E01EB91D680027A3BB /* UserViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5BC520901EB8BA1600C792A6 = {
+			isa = PBXGroup;
+			children = (
+				5BC5209B1EB8BA1600C792A6 /* CardSmith */,
+				5BC5209A1EB8BA1600C792A6 /* Products */,
+				9C1834568AC08ABDEC1F88B9 /* Pods */,
+				9E81B86D9E75F7A2A236CCCC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5BC5209A1EB8BA1600C792A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BC520991EB8BA1600C792A6 /* CardSmith.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BC5209B1EB8BA1600C792A6 /* CardSmith */ = {
+			isa = PBXGroup;
+			children = (
+				5BC520B81EB8DF0400C792A6 /* CardSmith */,
+				5BC5209C1EB8BA1600C792A6 /* AppDelegate.swift */,
+				5B18E0E21EB92AE10027A3BB /* ViewControllers */,
+				5BC520A01EB8BA1600C792A6 /* Main.storyboard */,
+				5BC520A61EB8BA1600C792A6 /* Assets.xcassets */,
+				5BC520A81EB8BA1600C792A6 /* LaunchScreen.storyboard */,
+				5BC520AB1EB8BA1600C792A6 /* Info.plist */,
+				5BC520B11EB8BB3200C792A6 /* Bridging-Header.h */,
+				5BC520B41EB8C1D300C792A6 /* Extensions.swift */,
+				5B82E90C1EBBB89B00153D9E /* credentials-example.plist */,
+				5B82E90A1EBBB7E100153D9E /* credentials.plist */,
+				5B82E90E1EBBBED200153D9E /* README.md */,
+			);
+			path = CardSmith;
+			sourceTree = "<group>";
+		};
+		5BC520B81EB8DF0400C792A6 /* CardSmith */ = {
+			isa = PBXGroup;
+			children = (
+				5BC520B91EB8DF1E00C792A6 /* User.swift */,
+				5BC520BB1EB8F02000C792A6 /* Account.swift */,
+				5BC520BD1EB8F54A00C792A6 /* CardSmithApi.swift */,
+			);
+			name = CardSmith;
+			sourceTree = "<group>";
+		};
+		9C1834568AC08ABDEC1F88B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BD83B5C70B300D8785EC1C9 /* Pods-CardSmith.debug.xcconfig */,
+				6687C8AB3D894945F7427AE8 /* Pods-CardSmith.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E81B86D9E75F7A2A236CCCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEAF2E38FE8FE1527133076F /* Pods_CardSmith.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BC520981EB8BA1600C792A6 /* CardSmith */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BC520AE1EB8BA1600C792A6 /* Build configuration list for PBXNativeTarget "CardSmith" */;
+			buildPhases = (
+				1AEC6FDDCAF28990154032B6 /* [CP] Check Pods Manifest.lock */,
+				5BC520951EB8BA1600C792A6 /* Sources */,
+				5BC520961EB8BA1600C792A6 /* Frameworks */,
+				5BC520971EB8BA1600C792A6 /* Resources */,
+				5F83290925CF0903F0D0E141 /* [CP] Embed Pods Frameworks */,
+				F158453091D87DD97F7CCA15 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardSmith;
+			productName = CardSmith;
+			productReference = 5BC520991EB8BA1600C792A6 /* CardSmith.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BC520911EB8BA1600C792A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Seth Battis";
+				TargetAttributes = {
+					5BC520981EB8BA1600C792A6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = WR62488W8Z;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5BC520941EB8BA1600C792A6 /* Build configuration list for PBXProject "CardSmith" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BC520901EB8BA1600C792A6;
+			productRefGroup = 5BC5209A1EB8BA1600C792A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BC520981EB8BA1600C792A6 /* CardSmith */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BC520971EB8BA1600C792A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC520AA1EB8BA1600C792A6 /* LaunchScreen.storyboard in Resources */,
+				5B82E90B1EBBB7E100153D9E /* credentials.plist in Resources */,
+				5BC520A71EB8BA1600C792A6 /* Assets.xcassets in Resources */,
+				5B82E90D1EBBB89B00153D9E /* credentials-example.plist in Resources */,
+				5BC520A21EB8BA1600C792A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AEC6FDDCAF28990154032B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F83290925CF0903F0D0E141 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardSmith/Pods-CardSmith-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F158453091D87DD97F7CCA15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardSmith/Pods-CardSmith-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BC520951EB8BA1600C792A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B18E0E11EB91D680027A3BB /* UserViewController.swift in Sources */,
+				5BC5209F1EB8BA1600C792A6 /* SignInViewController.swift in Sources */,
+				5BC520B51EB8C1D300C792A6 /* Extensions.swift in Sources */,
+				5BC520BA1EB8DF1E00C792A6 /* User.swift in Sources */,
+				5BC5209D1EB8BA1600C792A6 /* AppDelegate.swift in Sources */,
+				5BC520BC1EB8F02000C792A6 /* Account.swift in Sources */,
+				5B82E90F1EBBBED200153D9E /* README.md in Sources */,
+				5BC520BE1EB8F54A00C792A6 /* CardSmithApi.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5BC520A01EB8BA1600C792A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BC520A11EB8BA1600C792A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BC520A81EB8BA1600C792A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BC520A91EB8BA1600C792A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BC520AC1EB8BA1600C792A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BC520AD1EB8BA1600C792A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BC520AF1EB8BA1600C792A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BD83B5C70B300D8785EC1C9 /* Pods-CardSmith.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WR62488W8Z;
+				INFOPLIST_FILE = CardSmith/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.stmarksschool.smcs.CardSmith;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CardSmith/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5BC520B01EB8BA1600C792A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6687C8AB3D894945F7427AE8 /* Pods-CardSmith.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WR62488W8Z;
+				INFOPLIST_FILE = CardSmith/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.stmarksschool.smcs.CardSmith;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CardSmith/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BC520941EB8BA1600C792A6 /* Build configuration list for PBXProject "CardSmith" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC520AC1EB8BA1600C792A6 /* Debug */,
+				5BC520AD1EB8BA1600C792A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BC520AE1EB8BA1600C792A6 /* Build configuration list for PBXNativeTarget "CardSmith" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC520AF1EB8BA1600C792A6 /* Debug */,
+				5BC520B01EB8BA1600C792A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BC520911EB8BA1600C792A6 /* Project object */;
+}

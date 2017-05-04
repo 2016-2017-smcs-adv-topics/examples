@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Money (2.0.1):
+    - ValueCoding (~> 2)
+  - ValueCoding (2.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Money
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Money: 6faa689f86c455112971c900e8a31fa0b9c02365
+  ValueCoding: f18cd2f0c941c43e06669717ca25aeed02d702a9
+
+PODFILE CHECKSUM: 4e78d8a4f4dac19f27cc391c471ba766bb98acca
+
+COCOAPODS: 1.2.1
