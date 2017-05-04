@@ -9,6 +9,11 @@
 import Foundation
 import Alamofire
 
+/*
+ 
+ An object to handle requests to the CardSmith API
+ 
+ */
 class CardSmithApi : NSObject {
 
     var apiUrl: String
@@ -16,6 +21,7 @@ class CardSmithApi : NSObject {
     var applicationId: String
     var seed: String
 
+    /* Create the object from the credentials property list */
     init(_ dict: Dictionary<String, String>) {
         self.apiUrl = dict["apiUrl"]!
         self.apiVersion = dict["apiVersion"]!
@@ -23,6 +29,7 @@ class CardSmithApi : NSObject {
         self.seed = dict["seed"]!
     }
     
+    /* Authenticate a username/password pair and return the matching User object, or nil if no user matches */
     func loginAuthenticate(username: String, password: String, completion: @escaping (_: [String: Any]) -> Void) {
         let timestamp = Int(NSDate().timeIntervalSince1970 * 1000)
         

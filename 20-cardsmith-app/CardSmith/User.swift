@@ -8,6 +8,11 @@
 
 import Foundation
 
+/*
+ 
+ A CardSmith User object
+ 
+ */
 class User : NSObject {
     
     var firstName: String = ""
@@ -18,6 +23,7 @@ class User : NSObject {
     var mobileURL: URL?
     var accounts: [Account] = []
     
+    /* Construct a CardSmith User from the JSON data in the API response */
     init?(data: [String: Any]) {
         super.init()
         
@@ -42,6 +48,7 @@ class User : NSObject {
                 self.mobileURL = URL(string: value as! String)!
                 break
             case "accounts":
+                /* build Account objects out of the accounts JSON data */
                 for account in value as! [[String: Any]] {
                     self.accounts.append(Account(data: account["account"] as! [String: Any]))
                 }
@@ -57,6 +64,7 @@ class User : NSObject {
         }
     }
     
+    /* generate a convenient string describing the object when requested */
     override public var description: String {
         return "User: [\n\tfirstName: \(firstName)\n\tlastName: \(lastName)\n\tactiveCardNumber: \(activeCardNumber)\n\tactiveCardNumber: \(activeCardNumber)\n\tissuerId: \(issuerId)\n\tmobileURL: \(mobileURL!)\n\taccounts: \(accounts)\n]"
     }

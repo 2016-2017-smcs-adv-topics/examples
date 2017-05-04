@@ -2,9 +2,13 @@
 //  Extensions.swift
 //  CardSmith
 //
-// http://stackoverflow.com/a/25762128
-//
 
+/*
+ 
+ Extend the core String class to generate SHA1 hashes of string values
+ http://stackoverflow.com/a/25762128
+ 
+ */
 extension String {
     func sha1() -> String {
         let data = self.data(using: String.Encoding.utf8)!

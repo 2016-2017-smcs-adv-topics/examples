@@ -23,10 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        /* load the API credentials out of the credentials.plist property list file */
         if let path = Bundle.main.path(forResource: "credentials", ofType: "plist") {
             self.credentials = NSDictionary(contentsOfFile: path) as! Dictionary<String, String>?
+            
+            /* instantiate the api instance variable from the loaded credentials */
             self.api = CardSmithApi(self.credentials!)
         } else {
+            /* bad, bad things happened because credentials couldn't be loaded! */
             return false
         }
         

@@ -8,6 +8,11 @@
 
 import UIKit
 
+/*
+ 
+ The view controler for the user view
+ 
+ */
 class UserViewController : UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var activeCardNumber: UILabel!
